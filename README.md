@@ -6,7 +6,6 @@ This template includes:
 * Easy settings setup with [Decouple](https://github.com/henriquebastos/python-decouple)
 * Use of URL's to manage database access
 * Static assets serving with dj-static with a WSGI server
-* A [one-block setup](https://github.com/henriquebastos/django-quickstart/blob/master/one-block-setup.md) ready to **deploy in seconds** into heroku,
 
 ## Usage
 
