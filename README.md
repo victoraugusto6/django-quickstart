@@ -6,7 +6,7 @@ This template includes:
 * Easy settings setup with [Decouple](https://github.com/henriquebastos/python-decouple)
 * Use of URL's to manage database access
 * Static assets serving with dj-static with a WSGI server
-* A [one-block setup](https://github.com/henriquebastos/django-quickstart/blob/master/one-block-setup.md) ready to **deploy in seconds** into heroku, 
+* A [one-block setup](https://github.com/henriquebastos/django-quickstart/blob/master/one-block-setup.md) ready to **deploy in seconds** into heroku,
 
 ## Usage
 
@@ -16,22 +16,21 @@ Lets create your project, **you will not clone this repo**, just follow the inst
 ```
 mkdir myproject
 cd myproject
-python -m venv .venv
+python -m venv .venv --upgrade-deps
 source .venv/bin/activate
 pip install django
 ```
 
-Now we can pull Django Quickstart Structure to Project 
+Now we can pull Django Quickstart Structure to Project
 
 ```
-django-admin startproject --template https://github.com/henriquebastos/django-quickstart/archive/master.zip --name=Procfile,.env myproject .
+django-admin startproject --template https://github.com/walison17/django-quickstart/archive/master.zip --name=Procfile,.env,pytest.ini myproject .
 ```
 
-And then, proceed with the installation of quickstart's requirements. 
+And then, proceed with the installation of quickstart's requirements.
 
 ```
-
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 Last but not least, deploy our app in heroku:
@@ -42,7 +41,7 @@ Last but not least, deploy our app in heroku:
 ```
 git init
 git add .
-git commit -m 'Initial import'
+git commit -m 'Start'
 heroku create myproject
 heroku config:set DEBUG=True SECRET_KEY=`cat .env | grep SECRET_KEY | cut -d = -f 2` ALLOWED_HOSTS="*"
 git push heroku master
