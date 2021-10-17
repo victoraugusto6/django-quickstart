@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-merge-conflict
+      - id: debug-statements
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v2.6.0
+    hooks:
+      - id: reorder-python-imports
+  - repo: https://github.com/psf/black
+    rev: 21.9b0
+    hooks:
+      - id: black
+        args: [-S]
+  - repo: https://github.com/jazzband/pip-tools
+    rev: 6.4.0
+    hooks:
+      - id: pip-compile
+        args: [--generate-hashes, --allow-unsafe]
+        files: ^requirements\.in$
+      - id: pip-compile
+        name: pip-compile dev
+        args: [--generate-hashes, --allow-unsafe, -o requirements-dev.txt]
+        files: ^requirements-dev\.in$

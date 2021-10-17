@@ -2,3 +2,5 @@
 pytest
 pytest-django
 pip-tools
+pre-commit
+black
