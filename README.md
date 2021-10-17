@@ -23,13 +23,18 @@ pip install django
 Now we can pull Django Quickstart Structure to Project
 
 ```
-django-admin startproject --template https://github.com/walison17/django-quickstart/archive/master.zip --name=Procfile,.env,pytest.ini myproject .
+django-admin startproject --template https://github.com/walison17/django-quickstart/archive/master.zip --name=Procfile,.env.example,pytest.ini myproject .
 ```
 
 And then, proceed with the installation of quickstart's dev requirements.
 
 ```
 pip install -r requirements-dev.txt
+```
+
+Create your .env file
+```
+cp .env.example .env
 ```
 
 Install pre-commit hooks
