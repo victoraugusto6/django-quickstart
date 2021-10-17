@@ -6,10 +6,10 @@ repos:
       - id: trailing-whitespace
       - id: check-merge-conflict
       - id: debug-statements
-  - repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.6.0
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.9.3
     hooks:
-      - id: reorder-python-imports
+      - id: isort
   - repo: https://github.com/psf/black
     rev: 21.9b0
     hooks:
