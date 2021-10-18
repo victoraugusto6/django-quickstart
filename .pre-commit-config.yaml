@@ -23,5 +23,5 @@ repos:
         files: ^requirements\.in$
       - id: pip-compile
         name: pip-compile dev
-        args: [--generate-hashes, --allow-unsafe, -o requirements-dev.txt]
+        args: [requirements-dev.in, --generate-hashes, --allow-unsafe, -o requirements-dev.txt]
         files: ^requirements-dev\.in$
